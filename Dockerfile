@@ -21,7 +21,7 @@ RUN python3 -m venv venv
 RUN . venv/bin/activate
 
 # Install any needed packages specified in requirements.txt
-RUN pip3 install --no-cache-dir -r bank_system/requirements.txt
+RUN pip3 install --no-cache-dir -r ./requirements.txt
 
 # Set the working directory to the cloned repository
 WORKDIR /app/bank_system
