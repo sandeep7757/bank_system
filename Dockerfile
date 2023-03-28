@@ -1,8 +1,8 @@
 # Use an official Python runtime as a parent image
 FROM python:3.9
 
-# Set the working directory to /app
-WORKDIR /app
+# Set the working directory to /bank_system
+WORKDIR /bank_system
 
 # Clone the repository into the container
 #RUN git clone https://github.com/sandeep7757/bank_system.git
@@ -24,7 +24,7 @@ RUN . venv/bin/activate
 RUN pip3 install --no-cache-dir -r ./requirements.txt
 
 # Set the working directory to the cloned repository
-WORKDIR /app/bank_system
+WORKDIR /bank_system
 
 # Run the Django development server
 CMD python3 manage.py runserver 0:8000
