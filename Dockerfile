@@ -2,10 +2,10 @@
 FROM python:3.9
 
 # Set the working directory to /bank_system
-WORKDIR /bank_system
+WORKDIR /app
 
 # Clone the repository into the container
-#RUN git clone https://github.com/sandeep7757/bank_system.git
+RUN git clone https://github.com/sandeep7757/bank_system.git
 
 # install the SQL DB
 RUN apt-get update && \
@@ -24,7 +24,7 @@ RUN . venv/bin/activate
 RUN pip3 install --no-cache-dir -r ./requirements.txt
 
 # Set the working directory to the cloned repository
-WORKDIR /bank_system
+WORKDIR app/bank_system
 
 # Run the Django development server
 CMD python3 manage.py runserver 0:8000
