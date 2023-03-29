@@ -2,7 +2,7 @@
 FROM python:3.9
 
 # Set the working directory to /bank_system
-# WORKDIR /app
+WORKDIR /app2
 
 # Clone the repository into the container
 #RUN git clone https://github.com/sandeep7757/bank_system.git
@@ -22,9 +22,6 @@ RUN . venv/bin/activate
 
 # Install any needed packages specified in requirements.txt
 RUN pip3 install --no-cache-dir -r ./requirements.txt
-
-# Set the working directory to the cloned repository
-WORKDIR Bank_system
 
 # Run the Django development server
 CMD python3 manage.py runserver 0:8000
