@@ -24,7 +24,7 @@ RUN . venv/bin/activate
 RUN pip3 install --no-cache-dir -r ./requirements.txt
 
 # Set the working directory to the cloned repository
-WORKDIR bank_system
+WORKDIR Bank_system
 
 # Run the Django development server
 CMD python3 manage.py runserver 0:8000
